@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to our cozy coffee shop where every sip is crafted with love.">
+  <title>Coffee Haven</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="#hero" class="header__link">Home</a></li>
+        <li><a href="#menu" class="header__link">Menu</a></li>
+        <li><a href="#contact" class="header__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Sip into Something Comfortable</h1>
+      <p class="hero__subtitle">Experience the warmth of our coffee in every cup.</p>
+      <a href="#menu" class="hero__button">View Menu</a>
+    </div>
+  </section>
+  <section id="menu" class="menu">
+    <h2 class="menu__title">Our Menu</h2>
+    <div class="menu__grid">
+      <div class="menu__card">
+        <h3 class="menu__card-title">Espresso</h3>
+        <p class="menu__card-description">Rich and bold, just the way you like it.</p>
+        <p class="menu__card-price">$3.50</p>
+      </div>
+      <div class="menu__card">
+        <h3 class="menu__card-title">Latte</h3>
+        <p class="menu__card-description">Smooth and creamy, perfect for any time.</p>
+        <p class="menu__card-price">$4.50</p>
+      </div>
+      <div class="menu__card">
+        <h3 class="menu__card-title">Americano</h3>
+        <p class="menu__card-description">Simple and strong, a classic choice.</p>
+        <p class="menu__card-price">$3.00</p>
+      </div>
+      <div class="menu__card">
+        <h3 class="menu__card-title">Cappuccino</h3>
+        <p class="menu__card-description">Balanced espresso and milk, a delightful treat.</p>
+        <p class="menu__card-price">$4.00</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2 class="contact__title">Get in Touch</h2>
+    <form action="https://formspree.io/f/{FORM_ID}" method="POST" class="contact__form">
+      <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
+      <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
+      <textarea name="message" placeholder="Your Message" class="contact__textarea" required></textarea>
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit" class="contact__button">Send Message</button>
+      <div class="contact__status"></div>
+    </form>
+  </section>
+  <footer class="footer">
+    <p class="footer__text">&copy; <span id="current-year"></span> Coffee Haven. All rights reserved.</p>
+  </footer>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
