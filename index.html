@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to our cozy coffee shop where every sip is crafted with love.">
-  <title>Coffee Haven</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Aroma</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <nav class="header__nav">
-      <ul class="header__list">
-        <li><a href="#hero" class="header__link">Home</a></li>
-        <li><a href="#menu" class="header__link">Menu</a></li>
-        <li><a href="#contact" class="header__link">Contact</a></li>
-      </ul>
+  <header>
+    <div class="logo">Café Aroma</div>
+    <nav id="nav-links" class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
-  <section id="hero" class="hero">
-    <div class="hero__content">
-      <h1 class="hero__title">Sip into Something Comfortable</h1>
-      <p class="hero__subtitle">Experience the warmth of our coffee in every cup.</p>
-      <a href="#menu" class="hero__button">View Menu</a>
-    </div>
-  </section>
-  <section id="menu" class="menu">
-    <h2 class="menu__title">Our Menu</h2>
-    <div class="menu__grid">
-      <div class="menu__card">
-        <h3 class="menu__card-title">Espresso</h3>
-        <p class="menu__card-description">Rich and bold, just the way you like it.</p>
-        <p class="menu__card-price">$3.50</p>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <h1>Welcome to Café Aroma</h1>
+      <p class="subtitle">Your daily dose of handcrafted coffee.</p>
+      <a href="#menu" class="cta-button">Explore Our Menu</a>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+      <h2>Our Signature Drinks</h2>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <h3>Espresso</h3>
+          <p class="description">Rich, bold, and perfectly pulled.</p>
+          <p class="price">$2.50</p>
+        </article>
+        <article class="menu-card">
+          <h3>Cappuccino</h3>
+          <p class="description">Espresso with steamed milk and foam.</p>
+          <p class="price">$3.75</p>
+        </article>
+        <article class="menu-card">
+          <h3>Latte</h3>
+          <p class="description">Smooth espresso with velvety milk.</p>
+          <p class="price">$4.00</p>
+        </article>
+        <article class="menu-card">
+          <h3>Mocha</h3>
+          <p class="description">Chocolate‑infused espresso delight.</p>
+          <p class="price">$4.50</p>
+        </article>
       </div>
-      <div class="menu__card">
-        <h3 class="menu__card-title">Latte</h3>
-        <p class="menu__card-description">Smooth and creamy, perfect for any time.</p>
-        <p class="menu__card-price">$4.50</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <div class="contact-grid">
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error" data-for="name"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error" data-for="email"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <span class="error" data-for="message"></span>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+        <aside class="contact-details">
+          <p><strong>Address:</strong><br />123 Bean Street<br />Brewtown, CO 80000</p>
+          <p><strong>Phone:</strong><br />(555) 123‑4567</p>
+          <p><strong>Hours:</strong><br />Mon‑Fri: 7am – 7pm<br />Sat‑Sun: 8am – 5pm</p>
+        </aside>
       </div>
-      <div class="menu__card">
-        <h3 class="menu__card-title">Americano</h3>
-        <p class="menu__card-description">Simple and strong, a classic choice.</p>
-        <p class="menu__card-price">$3.00</p>
-      </div>
-      <div class="menu__card">
-        <h3 class="menu__card-title">Cappuccino</h3>
-        <p class="menu__card-description">Balanced espresso and milk, a delightful treat.</p>
-        <p class="menu__card-price">$4.00</p>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="contact">
-    <h2 class="contact__title">Get in Touch</h2>
-    <form action="https://formspree.io/f/{FORM_ID}" method="POST" class="contact__form">
-      <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
-      <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
-      <textarea name="message" placeholder="Your Message" class="contact__textarea" required></textarea>
-      <input type="text" name="_gotcha" style="display:none">
-      <button type="submit" class="contact__button">Send Message</button>
-      <div class="contact__status"></div>
-    </form>
-  </section>
-  <footer class="footer">
-    <p class="footer__text">&copy; <span id="current-year"></span> Coffee Haven. All rights reserved.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Café Aroma. All rights reserved.</p>
   </footer>
-  <script defer src="js/main.js"></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
