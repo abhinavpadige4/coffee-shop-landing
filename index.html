@@ -1,66 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coffee Bliss</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coffee Bliss - Artisan coffee, handcrafted with love. Visit us for the finest brews in town.">
+  <title>Coffee Bliss | Artisan Coffee Shop</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">Coffee Bliss</div>
-    <nav class="nav-links" id="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Contact</a>
+    <a href="#home" class="logo">Coffee Bliss</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="home">
-    <h1>Welcome to Coffee Bliss</h1>
-    <p>Experience the perfect brew.</p>
-    <a href="#menu" class="cta-button">Explore Menu</a>
+    <h1 class="fade-in">Where Every Cup Tells a Story</h1>
+    <p class="fade-in">Handcrafted coffee, roasted with passion and served with love. Experience the perfect brew in the heart of the city.</p>
+    <a href="#menu" class="cta-button fade-in">Explore Our Menu</a>
   </section>
 
+  <!-- ABOUT -->
   <section class="about" id="about">
-    <h2>About Us</h2>
-    <p>At Coffee Bliss we source the finest beans...</p>
-    <img src="https://source.unsplash.com/800x600/?coffee" alt="Coffee beans" />
-  </section>
-
-  <section class="menu" id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="https://source.unsplash.com/400x300/?espresso" alt="Espresso" />
-        <h3>Espresso</h3>
+    <div class="about-grid">
+      <div class="about-text fade-in-left">
+        <h2>Our Story</h2>
+        <p>Founded in 2015, Coffee Bliss began with a simple dream: to bring the world's finest beans to your cup. Every morning, our master roasters carefully select single-origin beans from sustainable farms across Ethiopia, Colombia, and Guatemala.</p>
+        <p>We believe coffee is more than a drink — it's a ritual, a connection, and a moment of joy. From our cozy corner café to your morning commute, we're here to make every sip unforgettable.</p>
       </div>
-      <div class="menu-item">
-        <img src="https://source.unsplash.com/400x300/?latte" alt="Latte" />
-        <h3>Latte</h3>
-      </div>
-      <div class="menu-item">
-        <img src="https://source.unsplash.com/400x300/?cappuccino" alt="Cappuccino" />
-        <h3>Cappuccino</h3>
+      <div class="about-image fade-in-right">
+        <img src="https://images.unsplash.com/photo-1554118811-13647f46a533?auto=format&fit=crop&w=800&q=80" alt="Barista pouring latte art">
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>123 Brew Street, Bean City</p>
-    <p>Email: info@coffeebliss.com</p>
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="section-title fade-in">
+      <h2>Our Signature Menu</h2>
+      <p>From classic espresso to creative seasonal blends — every cup is crafted with care.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-item fade-in">
+        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="Classic Espresso">
+        <div class="menu-item-body">
+          <h3>Classic Espresso</h3>
+          <p>Rich, bold, and intense. A double shot of our signature dark roast blend.</p>
+          <span class="price">$3.50</span>
+        </div>
+      </article>
+      <article class="menu-item fade-in">
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="Caramel Latte">
+        <div class="menu-item-body">
+          <h3>Caramel Latte</h3>
+          <p>Velvety steamed milk, espresso, and a drizzle of house-made caramel.</p>
+          <span class="price">$5.25</span>
+        </div>
+      </article>
+      <article class="menu-item fade-in">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4baaaeb9?auto=format&fit=crop&w=600&q=80" alt="Cold Brew">
+        <div class="menu-item-body">
+          <h3>Cold Brew</h3>
+          <p>Slow-steeped for 18 hours. Smooth, refreshing, and naturally sweet.</p>
+          <span class="price">$4.75</span>
+        </div>
+      </article>
+      <article class="menu-item fade-in">
+        <img src="https://images.unsplash.com/photo-1578374772684-10a695516276?auto=format&fit=crop&w=600&q=80" alt="Mocha Delight">
+        <div class="menu-item-body">
+          <h3>Mocha Delight</h3>
+          <p>Espresso meets Belgian chocolate, topped with whipped cream and cocoa.</p>
+          <span class="price">$5.50</span>
+        </div>
+      </article>
+    </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-title fade-in">
+      <h2>What Our Customers Say</h2>
+      <p>Real stories from the people who make our mornings brighter.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial fade-in">
+        <div class="stars">★★★★★</div>
+        <p>"The best espresso I've ever had. The atmosphere is warm, the staff is friendly, and the coffee is simply world-class."</p>
+        <div class="author">— Sarah M.</div>
+      </div>
+      <div class="testimonial fade-in">
+        <div class="stars">★★★★★</div>
+        <p>"My daily ritual. I come here every morning before work and the baristas know my order by heart. Feels like family."</p>
+        <div class="author">— James K.</div>
+      </div>
+      <div class="testimonial fade-in">
+        <div class="stars">★★★★★</div>
+        <p>"Beautiful space, incredible coffee, and the pastries are to die for. Coffee Bliss is my favorite spot in the city."</p>
+        <div class="author">— Priya R.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-title fade-in">
+      <h2>Visit Us</h2>
+      <p>Drop by for a cup, or send us a message — we'd love to hear from you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in-left">
+        <h3>Get In Touch</h3>
+        <ul>
+          <li>123 Bean Street, Coffee District</li>
+          <li>Mon–Fri: 6:30 AM – 9:00 PM</li>
+          <li>Sat–Sun: 7:00 AM – 10:00 PM</li>
+          <li>hello@coffeebliss.coffee</li>
+          <li>(555) 123-4567</li>
+        </ul>
+      </div>
+      <form class="contact-form fade-in-right" id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 Coffee Bliss. All rights reserved.</p>
+    <p>&copy; 2025 Coffee Bliss. Crafted with ☕ and care.</p>
   </footer>
 
   <script src="script.js"></script>
